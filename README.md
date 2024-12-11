@@ -1,11 +1,6 @@
 # net-mdns
 
-[![build status](https://ci.appveyor.com/api/projects/status/github/richardschneider/net-mdns?branch=master&svg=true)](https://ci.appveyor.com/project/richardschneider/net-mdns) 
-[![travis build](https://travis-ci.org/richardschneider/net-mdns.svg?branch=master)](https://travis-ci.org/richardschneider/net-mdns)
-[![CircleCI](https://circleci.com/gh/richardschneider/net-mdns.svg?style=svg)](https://circleci.com/gh/richardschneider/net-mdns)
-[![Coverage Status](https://coveralls.io/repos/richardschneider/net-mdns/badge.svg?branch=master&service=github)](https://coveralls.io/github/richardschneider/net-mdns?branch=master)
-[![Version](https://img.shields.io/nuget/v/Makaretu.Dns.Multicast.svg)](https://www.nuget.org/packages/Makaretu.Dns.Multicast)
-[![docs](https://cdn.rawgit.com/richardschneider/net-mdns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-mdns/articles/intro.html)
+[![docs](https://cdn.rawgit.com/newky2k/net-mdns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-mdns/articles/intro.html)
 
 A simple Multicast Domain Name Service based on [RFC 6762](https://tools.ietf.org/html/rfc6762).  Can be used 
 as both a client (sending queries) or a server (responding to queries).
@@ -13,9 +8,10 @@ as both a client (sending queries) or a server (responding to queries).
 A higher level DNS Service Discovery based on [RFC 6763](https://tools.ietf.org/html/rfc6763) that automatically responds to any query for the 
 service or service instance.
 
+***This is a fork of the orginal project to use modern .NET and drop the dependency on ipnetwork2***
 ## Features
 
-- Targets Framework 4.6.1, .NET Standard 1.4 and 2.0
+- Targets Framework 8.0+
 - Supports IPv6 and IPv4 platforms
 - CI on Circle (Debian GNU/Linux), Travis (Ubuntu Xenial and OSX) and AppVeyor (Windows Server 2016)
 - Detects new and/or removed network interfaces
@@ -26,13 +22,13 @@ service or service instance.
 
 ## Getting started
 
-Published releases are available on [NuGet](https://www.nuget.org/packages/Makaretu.Dns.Multicast/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console)
+Published releases are available on [NuGet](https://www.nuget.org/packages/DSoft.Makaretu.Dns.Multicast/).  To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console)
 
-    PM> Install-Package Makaretu.Dns.Multicast
+    PM> Install-Package DSoft.Makaretu.Dns.Multicast
     
 or using .NET CLI run the following command in the project folder
 
-    > dotnet add package Makaretu.Dns.Multicast
+    > dotnet add package DSoft.Makaretu.Dns.Multicast
     
 ## Usage Service Discovery
 

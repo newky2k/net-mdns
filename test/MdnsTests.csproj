@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netcoreapp2;netcoreapp2.1;netcoreapp2.2;netcoreapp1.1</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
     <DebugType>portable</DebugType>
@@ -17,6 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Makaretu.Dns" Version="2.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" PrivateAssets="all" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" PrivateAssets="all" />
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" PrivateAssets="all" />
