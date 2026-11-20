@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0;net9.0;</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0;net10.0;net11.0</TargetFrameworks>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<AssemblyName>DSoft.Makaretu.Dns.Multicast</AssemblyName>
 		<RootNamespace>Makaretu.Dns</RootNamespace>
@@ -16,6 +16,7 @@
 		<Version>0.42</Version>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>DSIcon.png</PackageIcon>
 		<!-- Nuget specs -->
 		<PackageId>DSoft.Makaretu.Dns.Multicast</PackageId>
 		<Authors>Richard Schneider, newky2k</Authors>
@@ -30,6 +31,7 @@
 
 	<ItemGroup>
 		<None Include="../README.md" Pack="true" PackagePath="\" />
+		<None Include="../DSIcon.png" Pack="true" PackagePath="\" Visible="false" />
 	</ItemGroup>
 	
 	<PropertyGroup Condition=" '$(Configuration)'=='Release'">
@@ -42,10 +44,10 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition=" '$(Configuration)'=='Release'">
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="11.0.100" PrivateAssets="All" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+	<PropertyGroup Condition="'$(TF_BUILD)' == 'true' OR '$(GITHUB_ACTIONS)' == 'true'">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 

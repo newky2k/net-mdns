@@ -1,0 +1,38 @@
+# Pull request validation: builds Release. Publishes nothing.
+name: CI
+
+on:
+  pull_request:
+    branches: [main, development]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.x
+            9.x
+            10.x
+            11.x
+
+      - name: Restore
+        run: dotnet restore Mdns.sln
+
+      - name: Build
+        run: dotnet build Mdns.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test test/MdnsTests.csproj --configuration Release --no-build
+
