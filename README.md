@@ -1,6 +1,6 @@
 # net-mdns
 
-[![docs](https://cdn.rawgit.com/newky2k/net-mdns/master/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-mdns/articles/intro.html)
+[![docs](https://cdn.rawgit.com/newky2k/net-mdns/main/doc/images/docs-latest-green.svg)](https://richardschneider.github.io/net-mdns/articles/intro.html)
 
 A simple Multicast Domain Name Service based on [RFC 6762](https://tools.ietf.org/html/rfc6762).  Can be used 
 as both a client (sending queries) or a server (responding to queries).
@@ -13,7 +13,7 @@ service or service instance.
 
 - Targets Framework 8.0+
 - Supports IPv6 and IPv4 platforms
-- CI on Circle (Debian GNU/Linux), Travis (Ubuntu Xenial and OSX) and AppVeyor (Windows Server 2016)
+- CI and releases on GitHub Actions
 - Detects new and/or removed network interfaces
 - Supports multicasting on multiple network interfaces
 - Supports reverse address mapping
@@ -144,6 +144,6 @@ mdns.Start();
 ## License
 Copyright © 2018-2019 Richard Schneider (makaretu@gmail.com)
 
-The package is licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php "Read more about the MIT license form") license. Refer to the [LICENSE](https://github.com/richardschneider/net-mdns/blob/master/LICENSE) file for more information.
+The package is licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php "Read more about the MIT license form") license. Refer to the [LICENSE](https://github.com/newky2k/net-mdns/blob/main/LICENSE) file for more information.
 
 <a href="https://www.buymeacoffee.com/kmXOxKJ4E" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
